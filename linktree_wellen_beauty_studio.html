@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wellen Beauty Studio | Links</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display (Serif luxuosa) & Montserrat (Sans-serif moderna) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#F5EFA9',
+              400: '#E3D893', // Cor original fornecida
+              500: '#C9BD74',
+              600: '#A89B52',
+            },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Estilos personalizados para o tema de luxo Clean & Gold */
+    body {
+      background-color: #FFFFFF;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(227, 216, 147, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(227, 216, 147, 0.15) 0%, transparent 60%);
+      font-family: 'Montserrat', sans-serif;
+      color: #000000;
+    }
+
+    /* Borda e sombra dourada elegante */
+    .gold-shadow {
+      box-shadow: 0 10px 25px -5px rgba(227, 216, 147, 0.4);
+    }
+
+    .gold-shadow-hover:hover {
+      box-shadow: 0 15px 35px -5px rgba(201, 189, 116, 0.6);
+    }
+
+    /* Efeito de transição suave */
+    .btn-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn-card:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Transição suave para sanfona/accordion */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+
+    .accordion-content.open {
+      max-height: 1200px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="text-black min-h-screen flex flex-col items-center justify-between p-4 sm:p-6">
+
+  <!-- Container Principal -->
+  <main class="w-full max-w-md my-auto py-6 flex flex-col items-center">
+    
+    <!-- Foto de Perfil com moldura dourada -->
+    <div class="relative mb-5 group">
+      <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-[3px] bg-gradient-to-b from-gold-400 via-gold-500 to-gold-300 gold-shadow">
+        <div class="w-full h-full rounded-full overflow-hidden border-2 border-white">
+          <img 
+            src="IMG_4932.jpg" 
+            alt="Wellen Beauty Studio" 
+            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            onerror="this.onerror=null; this.src='FOTOWELLEN.png';"
+          />
+        </div>
+      </div>
+      <!-- Detalhe Luxuoso -->
+      <div class="absolute bottom-1 right-1 bg-white rounded-full p-1 border border-gold-400 shadow-md">
+        <i class="fa-solid fa-sparkles text-gold-600 text-xs px-1"></i>
+      </div>
+    </div>
+
+    <!-- Título do Perfil em Preto -->
+    <h1 class="font-serif text-2xl sm:text-3xl font-bold tracking-wide text-center text-black mb-1">
+      Wellen Beauty
+    </h1>
+    <div class="flex items-center gap-2 mb-3">
+      <span class="h-[1px] w-6 bg-gold-500"></span>
+      <span class="font-serif italic text-black font-semibold text-xs sm:text-sm tracking-widest uppercase">Studio</span>
+      <span class="h-[1px] w-6 bg-gold-500"></span>
+    </div>
+
+    <!-- Especialidades / Subtítulo -->
+    <p class="text-xs sm:text-sm text-gray-700 tracking-wider text-center font-medium mb-8 max-w-xs">
+      Maquiagem <span class="text-gold-600 font-bold">•</span> Nail Designer <span class="text-gold-600 font-bold">•</span> Lash
+    </p>
+
+    <!-- Lista de Links Principais -->
+    <div class="w-full space-y-4 px-2">
+
+      <!-- BOTÃO 1: Agendar Horário -->
+      <a 
+        href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+meu+hor%C3%A1rio" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="btn-card gold-shadow gold-shadow-hover flex items-center justify-between w-full p-4 rounded-2xl bg-gold-400 text-black font-semibold text-sm tracking-wide border border-gold-300 group"
+      >
+        <div class="w-9 h-9 rounded-xl bg-black/10 flex items-center justify-center text-black">
+          <i class="fa-solid fa-calendar-check text-lg"></i>
+        </div>
+        <span class="flex-1 text-center font-bold uppercase text-xs sm:text-sm tracking-wider">Agendar Horário</span>
+        <i class="fa-solid fa-chevron-right text-xs text-black/70 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+
+      <!-- BOTÃO 2: Nossos Procedimentos e Preços (Sanfona Interativa) -->
+      <div class="w-full">
+        <button 
+          id="toggleServicesBtn"
+          onclick="toggleServices()"
+          class="btn-card gold-shadow gold-shadow-hover flex items-center justify-between w-full p-4 rounded-2xl bg-gold-400 text-black font-semibold text-sm tracking-wide border border-gold-300 group text-left cursor-pointer"
+        >
+          <div class="w-9 h-9 rounded-xl bg-black/10 flex items-center justify-center text-black">
+            <i class="fa-solid fa-list-check text-lg"></i>
+          </div>
+          <span class="flex-1 text-center font-bold uppercase text-xs sm:text-sm tracking-wider">Nossos Procedimentos & Preços</span>
+          <i id="accordionIcon" class="fa-solid fa-chevron-down text-xs text-black/70 transition-transform duration-300"></i>
+        </button>
+
+        <!-- Conteúdo Expandível de Serviços -->
+        <div id="servicesAccordion" class="accordion-content mt-3 space-y-4 rounded-2xl bg-white border border-gold-400/40 p-4 shadow-xl">
+          
+          <!-- CATEGORIA 1: UNHAS -->
+          <div class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50/50">
+            <div class="relative h-60 w-full">
+              <img src="unha.jpeg" alt="Unhas" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-3">
+                <h3 class="font-serif text-white font-bold text-base flex items-center gap-2">
+                  <i class="fa-solid fa-hand-sparkles text-gold-400 text-sm"></i> Unhas
+                </h3>
+              </div>
+            </div>
+
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between items-center text-xs sm:text-sm pb-2 border-b border-gray-200">
+                <div>
+                  <p class="font-semibold text-black">Alongamento Molde F1</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 120,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+Alongamento+Molde+F1" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-xs sm:text-sm pb-2 border-b border-gray-200">
+                <div>
+                  <p class="font-semibold text-black">Manutenção</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 80,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+Manuten%C3%A7%C3%A3o+de+Unhas" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <div>
+                  <p class="font-semibold text-black">Esmaltação em Gel</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 45,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+Esmalta%C3%A7%C3%A3o+em+Gel" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORIA 2: MAQUIAGEM -->
+          <div class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50/50">
+            <div class="relative h-60 w-full">
+              <img src="Maquiagem.jpeg" alt="Maquiagem" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-3">
+                <h3 class="font-serif text-white font-bold text-base flex items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-gold-400 text-sm"></i> Maquiagem
+                </h3>
+              </div>
+            </div>
+
+            <div class="p-3">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <div>
+                  <p class="font-semibold text-black">Maquiagem Profissional</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 90,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+minha+Maquiagem" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORIA 3: CÍLIOS -->
+          <div class="rounded-xl overflow-hidden border border-gray-100 bg-gray-50/50">
+            <div class="relative h-60 w-full">
+              <img src="cilios.jpeg" alt="Cílios" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-3">
+                <h3 class="font-serif text-white font-bold text-base flex items-center gap-2">
+                  <i class="fa-solid fa-eye text-gold-400 text-sm"></i> Cílios (Lash)
+                </h3>
+              </div>
+            </div>
+
+            <div class="p-3 space-y-3">
+              <div class="flex justify-between items-center text-xs sm:text-sm pb-2 border-b border-gray-200">
+                <div>
+                  <p class="font-semibold text-black">Aplicação</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 110,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+Aplica%C3%A7%C3%A3o+de+C%C3%ADlios" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <div>
+                  <p class="font-semibold text-black">Manutenção</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-bold text-black text-sm">R$ 75,00</span>
+                  <a href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+quero+agendar+Manuten%C3%A7%C3%A3o+de+C%C3%ADlios" target="_blank" class="block text-[10px] text-gold-600 font-bold hover:underline">Agendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOTÃO 3: Instagram Direct Link -->
+      <a 
+        href="https://www.instagram.com/wellenbeauty_studio/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="btn-card flex items-center justify-between w-full p-4 rounded-2xl bg-white border-2 border-gold-400 text-black font-semibold text-sm tracking-wide shadow-md hover:bg-gray-50 group"
+      >
+        <div class="w-9 h-9 rounded-xl bg-gold-400/20 flex items-center justify-center text-black">
+          <i class="fa-brands fa-instagram text-lg text-gold-600"></i>
+        </div>
+        <span class="flex-1 text-center font-bold text-xs sm:text-sm tracking-wider uppercase text-black">Instagram Studio</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-black/60 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+      </a>
+
+    </div>
+
+    <!-- Redes Sociais no Rodapé -->
+    <div class="flex items-center justify-center gap-6 mt-10">
+      <a 
+        href="https://www.instagram.com/wellenbeauty_studio/" 
+        target="_blank" 
+        aria-label="Instagram"
+        class="w-11 h-11 rounded-full border-2 border-gold-400 bg-white shadow-md flex items-center justify-center text-black hover:bg-gold-400 transition-all duration-300"
+      >
+        <i class="fa-brands fa-instagram text-xl"></i>
+      </a>
+      <a 
+        href="https://api.whatsapp.com/send?phone=557599511605&text=Ol%C3%A1%2C+vim+pelo+seu+Linktree" 
+        target="_blank" 
+        aria-label="WhatsApp"
+        class="w-11 h-11 rounded-full border-2 border-gold-400 bg-white shadow-md flex items-center justify-center text-black hover:bg-gold-400 transition-all duration-300"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Rodapé discreto -->
+  <footer class="text-center text-[10px] sm:text-xs text-gray-400 font-medium tracking-widest uppercase pb-2">
+    © Wellen Beauty Studio • Realçando sua Beleza
+  </footer>
+
+  <!-- Script para alternar o accordion de procedimentos -->
+  <script>
+    function toggleServices() {
+      const accordion = document.getElementById('servicesAccordion');
+      const icon = document.getElementById('accordionIcon');
+      
+      if (accordion.classList.contains('open')) {
+        accordion.classList.remove('open');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        accordion.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
+
+</body>
+</html>
